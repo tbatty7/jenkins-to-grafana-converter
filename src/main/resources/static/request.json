@@ -1,0 +1,28 @@
+{
+  "ciUrl": "http://192.168.99.100:8085/",
+  "jobName": "eighth_service",
+  "fullJobName": "eighth_service",
+  "number": 48,
+  "slaveInfo": {
+    "slaveName": "",
+    "executor": "",
+    "label": ""
+  },
+  "startTime": 1583340459435,
+  "endTime": 1583340459435,
+  "startedUserId": "",
+  "startedUserName": "",
+  "result": "FAILURE",
+  "duration": 29263,
+  "parameters": {},
+  "scmInfo": {
+    "url": "",
+    "branch": "",
+    "commit": ""
+  },
+  "queueTime": 0,
+  "buildUrl": "job/eighth_service/48/",
+  "contextId": 0,
+  "buildCause": "",
+  "buildFailureCauses": []
+}
