@@ -18,11 +18,13 @@ public class Controller {
 
     @PostMapping("/jenkins-build")
     public ResponseEntity<String> receiveBuild(@RequestBody Map body) {
-        System.out.println("Build-----------------" + body);
-        System.out.println("Deserialization????????? - " + body.get("jobName"));
-        GrafanaTransformer transformer = new GrafanaTransformer();
-        GrafanaRequest transformedRequest = transformer.transform(body);
-        service.sendToGrafana(transformedRequest);
+        System.out.println(body);
+        MessageFilter filter = new MessageFilter();
+        if (filter.isUseful(body)) {
+            GrafanaTransformer transformer = new GrafanaTransformer();
+            GrafanaRequest transformedRequest = transformer.transform(body);
+            service.sendToGrafana(transformedRequest);
+        }
         return ResponseEntity.ok("got it");
     }
 
