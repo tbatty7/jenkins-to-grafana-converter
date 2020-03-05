@@ -18,7 +18,7 @@ class GrafanaServiceTest {
 
     @Test
     void canSendToGrafana() {
-        GrafanaRequest request = new GrafanaRequest("automated test from service", Arrays.asList("production"));
+        GrafanaRequest request = new GrafanaRequest("automated test from service", Arrays.asList("test"));
         service.sendToGrafana(request);
     }
 }
