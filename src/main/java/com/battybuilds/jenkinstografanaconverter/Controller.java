@@ -22,7 +22,7 @@ public class Controller {
         System.out.println("Deserialization????????? - " + body.get("jobName"));
         GrafanaTransformer transformer = new GrafanaTransformer();
         GrafanaRequest transformedRequest = transformer.transform(body);
-
+        service.sendToGrafana(transformedRequest);
         return ResponseEntity.ok("got it");
     }
 
