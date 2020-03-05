@@ -10,8 +10,8 @@ public class GrafanaTransformer {
         String jobName = (String) body.get("jobName");
         String buildResult = (String) body.get("result");
 
-        String message = "Deployed " + jobName + " / " + body.get("number") + " - " + buildResult;
-        List<String> tags = Arrays.asList("production", jobName);
+        String message = "Deployment " + jobName + " / " + body.get("number") + " - " + buildResult;
+        List<String> tags = Arrays.asList("jenkins", jobName, buildResult);
 
         return new GrafanaRequest(message, tags);
     }
