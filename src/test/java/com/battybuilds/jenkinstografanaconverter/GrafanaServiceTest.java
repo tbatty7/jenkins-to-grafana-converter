@@ -18,12 +18,7 @@ class GrafanaServiceTest {
 
     @Test
     void canSendToGrafana() {
-        GrafanaRequest request = new GrafanaRequest("from service", Arrays.asList("production"));
-        try {
-            service.sendToGrafana(request);
-        } catch (HttpClientErrorException e) {
-            System.out.println("++++++++++++++++++++++++" + e.getResponseBodyAsString());
-            throw e;
-        }
+        GrafanaRequest request = new GrafanaRequest("automated test from service", Arrays.asList("production"));
+        service.sendToGrafana(request);
     }
 }
